@@ -59,4 +59,54 @@ export const images = [
     alt: "Calm lake with reflection",
     name: "Mirror Lake",
   },
+  {
+    src: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0",
+    alt: "Ocean waves at sunset",
+    name: "Beach Waves",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0",
+    alt: "Night city lights",
+    name: "City Skyline",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0",
+    alt: "Forest trail with tall trees",
+    name: "Forest Trail",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0",
+    alt: "Desert sand dunes",
+    name: "Desert Dunes",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0",
+    alt: "Field with blooming flowers",
+    name: "Flower Field",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1503264116251-35a269479413?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0",
+    alt: "Snowy mountain landscape",
+    name: "Snow Peaks",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0",
+    alt: "Starry night sky",
+    name: "Starry Night",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0",
+    alt: "Bridge over river",
+    name: "Golden Gate",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0",
+    alt: "Green rice terraces",
+    name: "Rice Fields",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0",
+    alt: "Hot air balloons in sky",
+    name: "Hot Air Balloons",
+  },
 ];

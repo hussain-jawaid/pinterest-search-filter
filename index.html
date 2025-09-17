@@ -14,8 +14,10 @@
 </head>
 
 <body>
-    <main class="w-full h-screen bg-white flex">
-        <aside class="w-19 border-r border-[#e5e5e0ad] flex flex-col justify-between items-center py-8 text-[1.6rem]">
+    <main class="w-full h-screen bg-white flex overflow-hidden">
+        <!-- Sidebar -->
+        <aside
+            class="w-19 border-r border-[#e5e5e0ad] flex flex-col justify-between items-center py-8 text-[1.6rem] fixed top-0 left-0 h-screen bg-white">
             <div class="flex flex-col gap-10">
                 <i class="fa-brands fa-pinterest text-red-500"></i>
                 <i class="fa-solid fa-house"></i>
@@ -26,12 +28,12 @@
             <div><i class="fa-solid fa-gear"></i></div>
         </aside>
 
-        <!-- main window -->
-        <section class="w-full p-4">
+        <!-- Main window -->
+        <section class="ml-19 flex-1 h-screen overflow-y-auto">
             <!-- top section -->
-            <div class="w-full h-14 flex gap-5 items-center">
+            <div class="sticky top-0 bg-white w-full h-17 flex gap-5 items-center px-4">
                 <div class="w-full">
-                    <input type="text" placeholder="Search"
+                    <input type="text" placeholder="Search" id="searchInput"
                         class="w-full bg-[#e5e5e0ad] rounded-xl h-13 outline-none focus:ring-4 focus:ring-[#92C0FF] px-4">
                 </div>
                 <div class="flex items-center gap-2">
@@ -42,20 +44,14 @@
                 </div>
             </div>
 
-            <!-- images -->
-            <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 mt-4">
-                <img src="https://images.unsplash.com/photo-1757252800867-2e78e08a6d53?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="" class="w-full mb-4 rounded-lg">
-                <img src="https://images.unsplash.com/photo-1757659444738-d8173d9d7c62?q=80&w=383&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="" class="w-full mb-4 rounded-lg">
-                <img src="https://images.unsplash.com/photo-1757330878011-418ff67dd845?q=80&w=465&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="" class="w-full mb-4 rounded-lg">
-                <img src="https://images.unsplash.com/photo-1757999524841-6f5efc86cbac?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="" class="w-full mb-4 rounded-lg">
+            <!-- images container -->
+            <div id="imgsContainer" class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 mt-4 px-4">
+                <!-- all images will appear here -->
             </div>
         </section>
     </main>
-    <script src="script.js"></script>
+
+    <script type="module" src="script.js"></script>
 </body>
 
 </html>

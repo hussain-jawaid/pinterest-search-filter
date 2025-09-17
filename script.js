@@ -4,33 +4,41 @@ class SearchFilter {
   constructor(images, imgsContainerId) {
     this.images = images;
     this.imgsContainer = document.getElementById(imgsContainerId);
-
-    this.init();
+    this.showImages(images);
   }
 
-  init() {
-    this.showImages();
-  }
-
-  showImages() {
+  // Show given images
+  showImages(images) {
+    this.imgsContainer.innerHTML = ""; // clear before showing
     const fragment = document.createDocumentFragment();
-    this.images.forEach((img) => {
+
+    images.forEach((img) => {
       const imageElement = document.createElement("img");
-      imageElement.setAttribute("src", img.src);
-      imageElement.setAttribute("alt", img.alt);
+      imageElement.src = img.src;
+      imageElement.alt = img.alt;
       imageElement.className = "w-full rounded-xl mb-4";
       fragment.appendChild(imageElement);
     });
+
     this.imgsContainer.appendChild(fragment);
   }
-
-  filterImages(imgName) {}
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   const search = new SearchFilter(images, "imgsContainer");
+  const searchInput = document.getElementById("searchInput");
+  const searchesContainer = document.getElementById("searchesContainer");
+  const overlay = document.getElementById("overlay");
 
-  document.getElementById("searchInput").addEventListener("input", (e) => {
-    search.filterImages(e.target.value);
+  // Dim background on focus
+  searchInput.addEventListener("focus", () => {
+    searchesContainer.classList.remove("hidden");
+    overlay.classList.remove("hidden");
+  });
+
+  // Restore background on blur
+  searchInput.addEventListener("blur", () => {
+    searchesContainer.classList.add("hidden");
+    overlay.classList.add("hidden");
   });
 });
